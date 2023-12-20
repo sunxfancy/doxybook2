@@ -137,8 +137,10 @@ void Doxybook2::TextMarkdownPrinter::print(PrintData& data,
             break;
         }
         case XmlTextParser::Node::Type::IMAGE: {
-            const auto prefix = config.baseUrl + config.imagesFolder;
-            data.ss << "![" << node->extra << "](" << prefix << (prefix.empty() ? "" : "/") << node->extra << ")";
+            auto prefix = config.baseUrl + config.imagesFolder;
+            if (prefix.empty()) prefix += '/';
+            if (config.convertImagePaths == false) prefix = "";
+            data.ss << "![" << node->extra << "](" << prefix << node->extra << ")";
             data.eol = false;
             if (config.copyImages) {
                 std::ifstream src(Utils::join(inputDir, node->extra), std::ios::binary);

@@ -33,6 +33,7 @@ static const std::vector<ConfigArg> CONFIG_ARGS = {
     ConfigArg(&Doxybook2::Config::linkLowercase, "linkLowercase"),
     ConfigArg(&Doxybook2::Config::linkAndInlineCodeAsHTML, "linkAndInlineCodeAsHTML"),
     ConfigArg(&Doxybook2::Config::copyImages, "copyImages"),
+    ConfigArg(&Doxybook2::Config::convertImagePaths, "convertImagePaths"),
     ConfigArg(&Doxybook2::Config::sort, "sort"),
     ConfigArg(&Doxybook2::Config::useFolders, "useFolders"),
     ConfigArg(&Doxybook2::Config::imagesFolder, "imagesFolder"),

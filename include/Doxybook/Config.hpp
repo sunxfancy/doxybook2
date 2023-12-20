@@ -19,6 +19,9 @@ namespace Doxybook2 {
         // Copy images from the Doxygen xml dir?
         bool copyImages{true};
 
+        // Convert image paths
+        bool convertImagePaths{true};
+
         // Where to copy images
         std::string imagesFolder{"images"};
 
